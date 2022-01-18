@@ -4,6 +4,11 @@ import containerImg from "../Images/OBJECTS.svg"
 import {CarouselWrapper} from "react-pretty-carousel"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import "swiper/css/pagination"
+import SwiperCore, {
+    Pagination
+  } from 'swiper';
+  
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import container3Img from "../Images/Group 6.svg"
 import container3Imge from "../Images/Picture8.png"
@@ -123,37 +128,44 @@ function Home() {
                 </div>
             </section>
             <section className="container6">
-            <Swiper
-      spaceBetween={100} slidesPerView={3} onSlideChange={() => console.log('slide change')} onSwiper={(swiper) => console.log(swiper)} >
+            <Swiper spaceBetween={400} className="mySwiper" pagination={true} slidesPerView={3}   >
             <SwiperSlide>
-            <div className='container6__contents' >
+            <div className='container6__contents ' >
               <img src="" alt="" />
+              <div className='container6_content'>
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
+              </div>
               <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
-            <div className='container6__contents' >
+            <div className='container6__contents ' >
               <img src="" alt="" />
+              <div className='container6_content'>
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
+              </div>
               <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
-            <div container6__contents>
+            <div className='container6__contents ' >
               <img src="" alt="" />
+              <div className='container6_content'>
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
+              </div>
               <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
-            <div className='container6__contents' >
+            <div className='container6__contents ' >
               <img src="" alt="" />
+              <div className='container6_content'>
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
+              </div>
               <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
             </div>
             </SwiperSlide>
