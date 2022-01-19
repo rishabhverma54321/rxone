@@ -1,28 +1,33 @@
 import React from 'react'
 import "../Css/home.css"
 import containerImg from "../Images/OBJECTS.svg"
-import {CarouselWrapper} from "react-pretty-carousel"
+// import {CarouselWrapper} from "react-pretty-carousel"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/pagination"
-import SwiperCore, {
-    Pagination
+  import "swiper/css/effect-coverflow"
+  import SwiperCore, {
+    EffectCoverflow,Pagination
   } from 'swiper';
   
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Logo from "../Images/Picture1.png"
+import container2Img from "../Images/container2.svg"
+import container21Img from "../Images/container21.svg"
+import container22Img from "../Images/container22.svg"
+import container23Img from "../Images/container23.svg"
 import container3Img from "../Images/Group 6.svg"
 import container3Imge from "../Images/Picture8.png"
 import container4Img from "../Images/Group 8.svg"
 import container4Imge from "../Images/Picture2.jpg"
 import container5Img from "../Images/Picture11.jpg"
-import container5Imge from "../Images/Picture11 1.svg"
+import container5Imge from "../Images/Picture10.png"
 import carouselImg1 from "../Images/Mask Group1.svg"
 
 
 function Home() {
     SwiperCore.use([Pagination]);
-
+    SwiperCore.use([EffectCoverflow,Pagination]);
     
     return (
         <div>
@@ -30,7 +35,14 @@ function Home() {
             <section className="container1">
             <div className="bgCoverImg container__flex">
               <div className="container1__left">
-                  <h1> One stop for all <br /> your Care <br /> needs</h1>
+                  <h1> One stop for all your Care needs</h1>
+                  <ul>
+                      <li>Consult from top care specialists of your choice</li>
+                      <li>Doctors, Pharmacy & Labs, all care services in one interface</li>
+                      <li>Control your data and use for </li>
+                      <li>consultation whenever you need</li>
+                      <li>Track your progress through Progress Charts</li>
+                  </ul>
                   <button className=' btn container1__btn'>Book Appointment</button>
               </div>
               <div className="container1__right">
@@ -39,44 +51,59 @@ function Home() {
             </div>
             </section>
             <section className="container2">
-             <h1 className='container2__heading'>WHAT MAKES US APPART</h1>
-            <CarouselWrapper items={5}  mode="gallery" showControls={false}>
-                <div className='container2__flex'>
-                    <img src={carouselImg1} alt="" />
-                    <p>Book and track appointments <br /> hassle free</p>
-                    <button className='btn'>Learn More</button>
-                </div>
-                <div className='container2__flex'>
-                    <img src={carouselImg1} alt="" />
-                    <p>Book and track appointments <br /> hassle free</p>
-                    <button className='btn'>Learn More</button>
-                </div>
-                <div className='container2__flex'>
-                    <img src={carouselImg1} alt="" />
-                    <p>Book and track appointments <br /> hassle free</p>
-
-                    <button className='btn'>Learn More</button>
-                </div>
-                <div className='container2__flex'>
-                    <img src={carouselImg1} alt="" />
-                    <p>Book and track appointments <br /> hassle free</p>
-
-                    <button className='btn'>Learn More</button>
-                </div>
-                <div className='container2__flex'>
-                    <img src={carouselImg1} alt="" />
-                    <p>Book and track appointments <br /> hassle free</p>
-
-                    <button className='btn'>Learn More</button>
-                </div>
+             <h1 className='container2__heading'>What makes us stand apart !</h1>
+             <Swiper  grabCursor={true} centeredSlides={true} slidesPerView={'auto'} coverflowEffect={{
+                    "rotate": 50,
+                    "stretch": 0,
+                    "depth": 100,
+                    "modifier": 1,
+                    "slideShadows": true
+                    }} pagination={true} className="mySwiper">
+                    <SwiperSlide>
                 <div className='container2__flex'>
                     <img src={carouselImg1} alt="" />
                     <p>Book and track appointments hassle free</p>
+                    <button className='btn'>Learn More</button>
+                </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+                <div className='container2__flex'>
+                    <img src={container23Img} alt="" />
+                    <p>Order Lab Tests, Home Sample Collection, Online Reports</p>
+                    <button className='btn'>Learn More</button>
+                </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                <div className='container2__flex'>
+                    <img src={container2Img} alt="" />
+                    <p>Track your Health Parameters, Better results through Clinical Insights</p>
 
                     <button className='btn'>Learn More</button>
                 </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                <div className='container2__flex'>
+                    <img src={container21Img} alt="" />
+                    <p>Manage all your records at One place. Consent management for sharing.</p>
+
+                    <button className='btn'>Learn More</button>
+                </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                <div className='container2__flex'>
+                    <img src={container22Img} alt="" />
+                    <p>Book and track appointments <br /> hassle free</p>
+                    <button className='btn'>Learn More</button>
+                </div>
                 
-            </CarouselWrapper>
+                    </SwiperSlide>
+
+                </Swiper>
             </section>
             <section className="container3">
                 <div className="container3__left">
@@ -112,26 +139,31 @@ function Home() {
                 <div className="container5__content">
                  <div>
                      <img src={container5Img} alt="" />
-                     <h2>Development Paediatrics</h2>
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius recusandae, reprehenderit vel saepe commodi suscipit cum  </p>
+                     <h2>CORONAVIRUS</h2>
+                     <p>Myths and Facts about Covid-19 for Kids
+                     <p>-- Dr. Prasoon Pathak</p>
+                     </p>
                      <button className='btn'>Read More</button>
                  </div>
                  <div>
                      <img src={container5Imge} alt="" />
-                     <h2>Corona Virus</h2>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, voluptatibus adipisci, ea doloremque velit eius, sapiente fugit  </p>
+                     <h2>DEVELOPMENT PAEDIATRICS </h2>
+                     <p>Can autism be cured? <p>-- Dr. Himani Narula</p> </p>
                      <button className='btn'>Read More</button>
                  </div>
                  <div>
                      <img src={container5Img} alt="" />
-                     <h2>Physiotherapy</h2>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque temporibus est quasi magnam, </p>
+                     <h2>CORONAVIRUS</h2>
+                     <p>Myths and Facts about Covid-19 for Kids
+                     <p>-- Dr. Prasoon Pathak</p>
+                     </p>
                      <button className='btn'>Read More</button>
                  </div>
                 </div>
             </section>
             <section className="container6">
-            <Swiper className="mySwiper" pagination={true} slidesPerView={2}  centeredSlides= {true}  >
+            <h1>What our users have to say</h1>
+            <Swiper pagination={true} slidesPerView={2}  centeredSlides= {true}  >
             <SwiperSlide>
             <div className='container6__contents ' >
               <img src="" alt="" />
@@ -139,7 +171,7 @@ function Home() {
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
               </div>
-              <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
+              <p>Finally, a one stop shop for all my needs. Very simple interface, been very helpful during lock-down period to consult with my doctor easily. </p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -149,7 +181,7 @@ function Home() {
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
               </div>
-              <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
+              <p>Finally, a one stop shop for all my needs. Very simple interface, been very helpful during lock-down period to consult with my doctor easily. </p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -159,7 +191,7 @@ function Home() {
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
               </div>
-              <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
+              <p>Finally, a one stop shop for all my needs. Very simple interface, been very helpful during lock-down period to consult with my doctor easily.</p>
             </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -169,7 +201,7 @@ function Home() {
               <h2>Raghav Dixit</h2>
               <h3>-Physiotherapy Patient</h3>
               </div>
-              <p>Shewa Clinic is providing wonderful treatment to the people. The physiotherapy department have given me enormous relief by their therapy plan in the movement of my  </p>
+              <p>Finally, a one stop shop for all my needs. Very simple interface, been very helpful during lock-down period to consult with my doctor easily.</p>
             </div>
             </SwiperSlide>
             </Swiper>

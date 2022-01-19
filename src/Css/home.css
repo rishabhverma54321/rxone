@@ -37,19 +37,41 @@
     color: var(--white);
     /* cursor: pointer; */
     font-weight: 500;
-    font-size: 18px;                                                        
+    font-size: 18px;                                                    
 }
 
 .container1__left>h1{
     font-size: 55px;
     font-family: var(--sen);
     margin-bottom: 40px;
+    width:500px
+}
+
+.container1__left>ul{
+    /* list-style: none; */
+    line-height: 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .container1__right>img{
     height: 100%;
     width: 100%;
 }
+
+.mySwiper{
+    width: 1000px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* .mySwiper>SwiperSlide{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+   */
 
 .container2__flex{
     display: flex;
@@ -228,7 +250,7 @@
     width: 271px;
     height: 28px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     font-family: var(--roboto);
 }
@@ -237,6 +259,12 @@
     width: 245px;
     height: 105px;
     text-align: center;
+}
+
+.container5__content>div>p>p{
+    margin-top: 40px;
+    text-align: end;
+    font-size: 12px;
 }
 
 .container5__content>div>button{
@@ -318,14 +346,31 @@
 
 .container6_content>h3{
     font-weight: normal;
-font-size: 20px;
-font-family: var(--sen);
+    font-size: 20px;
+    font-family: var(--sen);
 }
 .container6{
-    margin: 150px 0px;
-    display: flex;
-    justify-content: center;
+    margin: 120px 0px;
 }
+
+.container6>h1{
+    text-align: center;
+    font-size: 40px;
+    line-height: 47px;
+    font-family: var(--roboto);
+    margin-bottom: 58px;
+}
+
+.container6>h1:after{
+    content: "";
+    display: block;
+    width: 367px;
+    height: 6px;
+    border-radius: 4.5px;
+    background-color: var(--violet);
+    margin: auto;
+}
+
 
 .container7{
     width: 100%;
